@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stlesheet" href="stlye.css">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="p-3 mb-2 bg-secondary text-white header">
+        <div class="container-fluid d-flex justify-content-center">
+         <h1>Weather Forecast</h1>
+        </div>
+    </header>
+
+    <section>
+     <div class="navbar w-110">
+        <div class="container-fluid" id="inputContainer">
+            <lable for="citySearchInput">Search a City</lable>
+            <input type="text" class="form-control form-control-sm" name="search-city" id="citySearchInput">   
+        </div> 
+    </div>
+
+    <div class="d-flex">
+    <button id="citySearchButton" type="submit" class="btn btn-primary" onclick="fetchWeather()">Search</button>
+    </div>
+
+    <div id="cityNameContainer" class="btn-group-vertical d-flex" role="group" aria-labbel="Basic example">
+        <button id="cityNameButton" type="button" class="btn btn-info text-white my-1">City</button>
+        <button id="cityNameButton" type="button" class="btn btn-info text-white my-1">City</button>
+        <button id="cityNameButton" type="button" class="btn btn-info text-white my-1">City</button>
+        <button id="cityNameButton" type="button" class="btn btn-info text-white my-1">City</button>
+        <button id="cityNameButton" type="button" class="btn btn-info text-white my-1">City</button>
+    </div>
+    </section>
+
+    <section class="col-12 col-md-9 col-lg-10">
+        <div id="displayCity" class="jumbotron m-3 border rounded p-3 flex-wrap">
+            <h1 id="CityName">City Name</h1>
+            <p id="localTemp" class="my-3">Temp: </p>
+            <p id="localWind" class="my-3">Wind: </p>
+            <p id="localHumidity" class="my-3">Humidity</p>
+
+        </div>
+
+        <h3 class="mt-4 mx-4"> 5-Day Forecast</h3>
+    </section>
+
+    <section id="searchHxContainer" class="d-flex flex-row justify-content-between">
+        <div id="dayCard" class="card bg-light m-3" style="width: 16rem; flex-wrap: wrap;"></div>  
+            <div id="dayCard" class="card-header">Day</div>
+            <div class="card-content">
+                <p id="forecastTempCard" class="text-content my-3">Temp: </p>
+                <p id="forecastWindCard" class="text-content my-3">Wind: </p>
+                <p id="forecastHumidityCard" class="text-content my-3">Humidity: </p>
+            </div>
+            <div id="dayCard" class="card bg-light m-3" style="width: 16rem; flex-wrap: wrap;"></div>  
+            <div id="dayCard" class="card-header">Day</div>
+            <div class="card-content">
+                <p id="forecastTempCard" class="text-content my-3">Temp: </p>
+                <p id="forecastWindCard" class="text-content my-3">Wind: </p>
+                <p id="forecastHumidityCard" class="text-content my-3">Humidity: </p>
+            </div>
+            <div id="dayCard" class="card bg-light m-3" style="width: 16rem; flex-wrap: wrap;"></div>  
+            <div id="dayCard" class="card-header">Day</div>
+            <div class="card-content">
+                <p id="forecastTempCard" class="text-content my-3">Temp: </p>
+                <p id="forecastWindCard" class="text-content my-3">Wind: </p>
+                <p id="forecastHumidityCard" class="text-content my-3">Humidity: </p>
+            </div>
+            <div id="dayCard" class="card bg-light m-3" style="width: 16rem; flex-wrap: wrap;"></div>  
+            <div id="dayCard" class="card-header">Day</div>
+            <div class="card-content">
+                <p id="forecastTempCard" class="text-content my-3">Temp: </p>
+                <p id="forecastWindCard" class="text-content my-3">Wind: </p>
+                <p id="forecastHumidityCard" class="text-content my-3">Humidity: </p>
+            </div>
+            <div id="dayCard" class="card bg-light m-3" style="width: 16rem; flex-wrap: wrap;"></div>  
+            <div id="dayCard" class="card-header">Day</div>
+            <div class="card-content">
+                <p id="forecastTempCard" class="text-content my-3">Temp: </p>
+                <p id="forecastWindCard" class="text-content my-3">Wind: </p>
+                <p id="forecastHumidityCard" class="text-content my-3">Humidity: </p>
+            </div>
+    
+    
+    
+        
+    
+    </section>
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<script  src="script.js"></script>
+</body>
+</html>
